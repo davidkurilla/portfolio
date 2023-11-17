@@ -1,0 +1,5 @@
+# Ignored Directories
+vendor/
+
+# Ignored Files
+composer.lock
