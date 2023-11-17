@@ -34,5 +34,15 @@ $f3->route('GET /contact', function() {
     echo $view->render('views/contact.html');
 });
 
+// Define 404 route
+$f3->set('ONERROR', function($f3) {
+    $f3->reroute('/404');
+});
+
+$f3->route("GET /404", function() {
+    $view = new Template();
+    echo $view->render('views/404.html');
+});
+
 // Run F3
 $f3->run();
