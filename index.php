@@ -34,6 +34,18 @@ $f3->route('GET /contact', function() {
     echo $view->render('views/contact.html');
 });
 
+// Define Login route
+$f3->route('GET /login', function() {
+    $view = new Template();
+    echo $view->render('views/login.html');
+});
+
+// Define admin route
+$f3->route('GET /admin', function() {
+    $view = new Template();
+    echo $view->render('views/admin.html');
+});
+
 // Define 404 route
 $f3->set('ONERROR', function($f3) {
     $f3->reroute('/404');
