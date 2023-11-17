@@ -12,7 +12,8 @@ $f3 = Base::instance();
 
 // Define root route
 $f3->route('GET /', function() {
-   echo "<h1>Hello, world!</h1>";
+   $view = new Template();
+   echo $view->render('views/home.html');
 });
 
 // Run F3
